@@ -31,6 +31,7 @@ lint_python:
   stage: lint
   script:
     - make lint
+    - black --check
 
 
 test:

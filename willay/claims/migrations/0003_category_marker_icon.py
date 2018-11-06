@@ -5,14 +5,18 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ('claims', '0002_claim_verified'),
-    ]
+    dependencies = [("claims", "0002_claim_verified")]
 
     operations = [
         migrations.AddField(
-            model_name='category',
-            name='marker_icon',
-            field=models.ImageField(blank=True, help_text='32x32 png image is required', null=True, upload_to='claims/category/marker_icon/%Y/%m/%d/', verbose_name='Marker icon'),
-        ),
+            model_name="category",
+            name="marker_icon",
+            field=models.ImageField(
+                blank=True,
+                help_text="32x32 png image is required",
+                null=True,
+                upload_to="claims/category/marker_icon/%Y/%m/%d/",
+                verbose_name="Marker icon",
+            ),
+        )
     ]
